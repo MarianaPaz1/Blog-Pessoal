@@ -6,10 +6,7 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import Mariana from './src/assets/Mariana.jpeg'
 
 
-function Footer(){
-    
-}
-export const footer: FC = (): ReactElement => {
+export const Footer: FC = (): ReactElement => {
     return (
         <Box
             sx={{

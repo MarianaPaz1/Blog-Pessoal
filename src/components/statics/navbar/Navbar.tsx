@@ -17,7 +17,7 @@ import { amber, deepOrange, grey } from '@mui/material/colors';
 import { MuiThemeProvider, ThemeProvider, createTheme} from '@material-ui/core/styles';
 
 
-const pages = ['Home', 'Portifólio', 'Temas'];
+const pages = ['Home', 'Portifólio', 'Temas', 'Cadastrar Temas'];
 const settings = ['Entrar', 'Perfil',  'Logout'];
 
 function Navbar() {
