@@ -1,25 +1,14 @@
-// import { useState } from 'react'
-// import './App.css'
-// import Home from './pages/home/Home'
-
-// function App() {
-  
-//   const [count, setCount] = useState(0)
-//   return (
-//      <Home/>
-
-//   )
-// }
-
-// export default App
-
-
 import * as React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Box from '@mui/material/Box';
 import { ThemeProvider, useTheme, createTheme } from '@mui/material/styles';
-import { amber, deepOrange, grey, brown} from '@mui/material/colors';
+import { amber, deepOrange, grey, brown } from '@mui/material/colors';
 import { PaletteMode } from '@mui/material';
 import Home from './pages/home/Home'
+import Login from './pages/login/Login';
+import Navbar from './components/statics/navbar/Navbar';
+import Footer from './components/statics/footer/Footer';
+import CadastroUsuario from './pages/cadastrarUsuario/CadastroUsuario';
 import './App.css'
 
 const getDesignTokens = (mode: PaletteMode) => ({
@@ -40,13 +29,13 @@ const getDesignTokens = (mode: PaletteMode) => ({
     text: {
       ...(mode === 'dark'
         ? {
-            primary: grey[50],
-            secondary: grey[500],
-          }
+          primary: grey[50],
+          secondary: grey[500],
+        }
         : {
-            primary: '#fff',
-            secondary: grey[500],
-          }),
+          primary: '#fff',
+          secondary: grey[500],
+        }),
     },
   },
 });
@@ -54,21 +43,18 @@ const getDesignTokens = (mode: PaletteMode) => ({
 function MyApp() {
   const theme = useTheme();
   return (
-    <Box
-      sx={{
-        display: 'flex',
-        width: '100%',
-        alignItems: 'center',
-        justifyContent: 'center',
-        bgcolor: 'background.primary',
-        color: 'text.primary',
-        borderRadius: 1,
-        // p: 3,
-      }}
-    >
-        <Home/>
-      
-    </Box>
+    <BrowserRouter>
+           <Navbar />
+        <div style={{ minHeight: '100vh' }}>
+          <Routes>
+            <Route path="/" element={<Login />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/cadastro" element={<CadastroUsuario />} />
+          </Routes>
+        </div>
+        <Footer />
+    </BrowserRouter >
   );
 }
 

@@ -1,0 +1,13 @@
+.text-decorator-none {
+    text-decoration: none !important;
+}
+
+.foto{
+    width: 80%;
+    height: 80%;
+    margin: 5%;
+}
+
+.MuiButton-textPrimary{
+color:white !important;
+}

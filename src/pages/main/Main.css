@@ -18,6 +18,7 @@ h1 {
   font-size: 50px;
   color: black;
   margin-top: 30vh;
+
 }
 #nome {
   color: #cd8d00;
@@ -38,3 +39,7 @@ h1 {
   padding: 2, 4, 3;
   color: black;
 }
+p{
+  color: black;
+}
+
