@@ -24,7 +24,9 @@ h1 {
   color: #cd8d00;
 }
 .botao {
-  color: #cd8d00;
+  color: #cd8d00 !important;
+  margin-right: 20px !important;
+  margin-top: 10px !important;
 }
 
 .modal {
@@ -43,3 +45,6 @@ p{
   color: black;
 }
 
+.text-decorator-none {
+  text-decoration: none !important;
+}

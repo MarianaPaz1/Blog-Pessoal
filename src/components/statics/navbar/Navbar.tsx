@@ -11,6 +11,10 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
+// import { useDispatch } from "react-redux";
+// import { addToken } from '../../../store/tokens/actions';
+// import {toast} from 'react-toastify';
+import {useNavigate } from 'react-router-dom'
 // import AdbIcon from '@mui/icons-material/Adb';
 import { PaletteMode } from '@mui/material';
 import { amber, deepOrange, grey } from '@mui/material/colors';
@@ -37,9 +41,7 @@ function Navbar() {
 
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
-  };
-
-  
+  };  
   return (
     <AppBar position="static">
     

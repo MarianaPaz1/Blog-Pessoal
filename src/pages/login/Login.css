@@ -11,3 +11,6 @@
 .MuiButton-textPrimary{
 color:white !important;
 }
+.text{
+    font-weight: bold;
+}
