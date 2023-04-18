@@ -10,6 +10,8 @@ import Navbar from './components/statics/navbar/Navbar';
 import Footer from './components/statics/footer/Footer';
 import CadastroUsuario from './pages/cadastrarUsuario/CadastroUsuario';
 import './App.css'
+import ListaTema from './components/temas/listaTema/ListaTema';
+import ListaPostagem from './components/postagem/listaPostagem/ListaPostagem';
 
 const getDesignTokens = (mode: PaletteMode) => ({
   palette: {
@@ -51,6 +53,8 @@ function MyApp() {
             <Route path="/login" element={<Login />} />
             <Route path="/home" element={<Home />} />
             <Route path="/cadastro" element={<CadastroUsuario />} />
+            <Route path="/tema" element={<ListaTema />} />
+            <Route path="/post" element={<ListaPostagem />} />
           </Routes>
         </div>
         <Footer />

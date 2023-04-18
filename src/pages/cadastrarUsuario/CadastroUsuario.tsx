@@ -55,6 +55,8 @@ function CadastroUsuario() {
             cadastroUsuario(`/usuarios/cadastrar`, user, setUserResult)
             alert('Usuário cadastrado com sucesso')
 
+             console.log('user: ' + Object.values(user))
+
         } else {
             alert('Dados inconsistentes. Favor verificar as informações de cadastro.')
         }
@@ -75,7 +77,7 @@ function CadastroUsuario() {
                         <TextField value={user.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='usuario' label='Usuário' name='usuario' margin='normal' fullWidth />
                         <TextField value={user.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='senha' label='Senha' name='senha' margin='normal' type='password' fullWidth />
                         <TextField value={confirmarSenha} onChange={(e: ChangeEvent<HTMLInputElement>) => confirmarSenhaHandle(e)} id='Csenha' label='Confirmar Senha' name='Csenha' margin='normal' type='password' fullWidth />
-                        <TextField value={user.foto} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='foto' label='Foto' name='foto' margin='normal'  fullWidth />
+                        <TextField value={user.foto} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='foto' label='Foto' name='foto' margin='normal' fullWidth />
                         <Box marginTop={2} textAlign='center'>
                             <Link to='/login' className='text-decorator-none'>
                                 <Button variant='contained' color='secondary' className='btnCancelar' >Cancelar</Button>
