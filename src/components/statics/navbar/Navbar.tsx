@@ -6,24 +6,17 @@ import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
-// import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-// import { useDispatch } from "react-redux";
-// import { addToken } from '../../../store/tokens/actions';
-// import {toast} from 'react-toastify';
-import {useNavigate } from 'react-router-dom'
-// import AdbIcon from '@mui/icons-material/Adb';
-import { PaletteMode } from '@mui/material';
-import { amber, deepOrange, grey } from '@mui/material/colors';
-import { MuiThemeProvider, ThemeProvider, createTheme} from '@material-ui/core/styles';
-
+import useLocalStorage from 'react-use-localstorage';
+import { Link, useNavigate } from 'react-router-dom'
+import './Navbar.css'
 
 const pages = ['Home', 'Portifólio', 'Temas', 'Cadastrar Temas'];
-const settings = ['Entrar', 'Perfil',  'Logout'];
+const settings = ['Logout'];
 
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
@@ -42,10 +35,21 @@ function Navbar() {
 
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
-  };  
+  };
+  // Função para deslogar
+  const [token, setToken] = useLocalStorage('token');
+  let navigate = useNavigate();
+
+  function goLogout() {
+    setToken('')
+    alert("Usuário deslogado")
+    navigate('/login')
+
+  }
+
   return (
     <AppBar position="static">
-    
+
       <Container maxWidth="xl" className='text-decorator-none'>
         <Toolbar disableGutters>
           <Typography
@@ -66,7 +70,7 @@ function Navbar() {
             BLOG
           </Typography>
 
-          <Box sx={{flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -95,13 +99,18 @@ function Navbar() {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+
+                <Link to="/home">
+                <MenuItem onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center">Home</Typography>
+                  
                 </MenuItem>
-              ))}
+                </Link>
+
             </Menu>
+
           </Box>
+       
           <Typography
             variant="h5"
             noWrap
@@ -132,7 +141,7 @@ function Navbar() {
             ))}
           </Box>
 
-          <Box sx={{ flexGrow: 0 }}>
+          <Box sx={{ flexGrow: 0 }} onClick={goLogout}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                 <Avatar alt="Remy Sharp" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPOnPAaq91xDOeIxxT9lMloWMnI28uSVjdANj1ksh4qbXb_gpDNZScToiVO32F9l__UD8&usqp=CAU" />
@@ -163,8 +172,8 @@ function Navbar() {
           </Box>
         </Toolbar>
       </Container>
-   
-    </AppBar>
+
+    </AppBar >
   );
 }
 export default Navbar;

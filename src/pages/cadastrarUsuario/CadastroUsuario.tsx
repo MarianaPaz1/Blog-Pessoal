@@ -49,7 +49,7 @@ function CadastroUsuario() {
         })
 
     }
-    async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
+    async function cadastrar(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault()
         if (confirmarSenha == user.senha) {
             cadastroUsuario(`/usuarios/cadastrar`, user, setUserResult)
@@ -71,7 +71,7 @@ function CadastroUsuario() {
 
             <Grid alignItems='center' xs={6}>
                 <Box paddingX={20}>
-                    <form onSubmit={onSubmit}>
+                    <form onSubmit={cadastrar}>
                         <Typography variant='h3' gutterBottom component='h3' align='center' className="texto2">Cadastrar</Typography>
                         <TextField value={user.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='nome' label='Nome' name='nome' margin='normal' fullWidth />
                         <TextField value={user.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='usuario' label='Usuário' name='usuario' margin='normal' fullWidth />

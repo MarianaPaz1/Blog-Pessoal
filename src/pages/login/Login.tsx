@@ -34,7 +34,7 @@ function Login() {
         }
     }, [token])
 
-    async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
+    async function logar(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault();
         // console.log('userLogin: ' + Object.values(userLogin));
         try {
@@ -54,7 +54,7 @@ function Login() {
 
             <Grid alignItems='center' xs={6}>
                 <Box paddingX={20}>
-                    <form onSubmit={onSubmit}>
+                    <form onSubmit={logar}>
                         <Typography variant='h3' gutterBottom component='h3' align='center' className="texto">Entrar</Typography>
                         <TextField id='usuario' value={userLogin.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updateModel(e)} label='Usuário' name='usuario' margin='normal' fullWidth />
                         <TextField id='senha' value={userLogin.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updateModel(e)} label='Senha' name='senha' margin='normal' type='password' fullWidth />
