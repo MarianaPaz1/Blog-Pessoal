@@ -1,3 +1,9 @@
 .text-decorator-none{
     text-decoration: none;
 }
+
+.bannerTema{
+    width: 90vw;
+  margin-left: 4%;
+  margin-top: 2%;
+}

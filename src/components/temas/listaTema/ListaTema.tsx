@@ -35,7 +35,7 @@ function ListaTema() {
 
 
   async function getTema(){
-    await busca("/tema", setTemas, {
+    await busca("/temas", setTemas, {
       headers: {
         'Authorization': token
       }
@@ -47,10 +47,16 @@ function ListaTema() {
     getTema()
   }, [temas.length])
 
+
   return (
     <>
-    {
+    <Link to="/formularioTema">
+     <img src="../../../../src/assets/cadastre.png" alt="banner" className="bannerTema"/>
+   </Link>
+
+   {
       temas.map(tema =>(
+        <Box display="flex" flexWrap="wrap" justifyContent="center">
       <Box m={2} >
         <Card variant="outlined">
           <CardContent>
@@ -82,11 +88,11 @@ function ListaTema() {
           </CardActions>
         </Card>
       </Box>
+         </Box >
       ))
       }
     </>
   );
 }
-
 
 export default ListaTema;

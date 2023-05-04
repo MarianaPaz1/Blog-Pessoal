@@ -15,7 +15,7 @@ function TabPostagem() {
     <>
       <TabContext value={value}>
         <AppBar position="static">
-          <Tabs centered  onChange={handleChange}>
+          <Tabs className="nav2" centered  onChange={handleChange}>
             <Tab label="Todas as postagens" value="1"/>
             <Tab label="Sobre-nós" value="2" />
           </Tabs>
@@ -26,8 +26,10 @@ function TabPostagem() {
           </Box>
         </TabPanel>
         <TabPanel value="2">
-          <Typography variant="h5" gutterBottom component="h5" align="center" className="titulo">Sobre-nós</Typography>
-          <Typography variant="body1" gutterBottom align="justify">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos ut eveniet natus totam et, voluptate dicta tempore alias, odio nobis non eius cupiditate minima inventore pariatur! Ipsum itaque consectetur voluptatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo velit consequuntur suscipit fugiat, nam quis quod quaerat veritatis et, vel ratione beatae, facere neque! Quo animi porro voluptate saepe deleniti? Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore adipisci, officia aut quidem dolorum deserunt iure dolorem doloribus velit nobis quas consequatur at ullam odit, nesciunt est nulla nihil excepturi!</Typography>
+          {/* <Typography variant="h5" gutterBottom component="h5" align="center" className="titulo">Sobre-Nós</Typography> */}
+          <Typography variant="body1" gutterBottom align="justify">
+          <iframe width="100%" height="500" src="https://www.youtube.com/embed/jXNXcn-Lnvs" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" ></iframe>
+          </Typography>
         </TabPanel>
       </TabContext>
     </>

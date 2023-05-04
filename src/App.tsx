@@ -13,7 +13,7 @@ import DeletarPostagem from './components/postagem/deletarPost/DeletarPostagem';
 import DeletarTema from './components/temas/deletarTema/DeletarTema';
 import CadastroPost from './components/postagem/cadastroPost/CadastroPostagem';
 import { Provider } from 'react-redux';
-import store from './store/Store';
+import store from './store/store';
 
 
 

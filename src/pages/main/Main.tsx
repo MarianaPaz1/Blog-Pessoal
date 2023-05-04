@@ -17,13 +17,11 @@ function Main() {
       <div className='container'>
         <Box display="flex" flexDirection="row" p={1} m={1}>
           <Box p={1}>
-            <h1> Seja Bem Vinde! <span id="nome"> Mariana Paz</span></h1>
-            <p>Expresse com responsabilidade os seus pensamentos e opiniões</p>
+            <h1> Seja Bem Vinde! <span id="nome"> Blog - Mariana Paz</span></h1>
+            <p>Expresse com responsabilidade os seus pensamentos e opiniões:</p>
             <Box display="flex" flexDirection="row" p={1} m={1}>
             <ModalPostagem />
-            <Link to="/post" className='text-decorator-none'>
-            <Button variant="outlined" className='botao'>Ver Postagens</Button>
-          </Link>
+            
           </Box>
           </Box>
           

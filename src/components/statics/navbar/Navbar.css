@@ -1,3 +1,191 @@
 .text-decorator-none {
     text-decoration: none !important;
 }
+
+.nav {
+    background-color: black !important;
+    display: flex;
+    align-items: center;
+}
+
+.cursor {
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+}
+
+.cursor img {
+    width: 50px;
+    height: 50px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.text-decorator-none {
+    text-decoration: none;
+}
+
+.toolbarStyle {
+ 
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav_links {
+    width: 55%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nameTypo {
+    font-weight: 300 !important;
+}
+
+.nameTypo:hover {
+    color: rgb(201, 200, 200);
+}
+
+.logout {
+    background-color: #cd8d00 ;
+    width: 120px;
+    height:45px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px !important;
+}
+
+.logout:hover {
+    background-color: white;
+    color: #cd8d00;
+    font-weight: bolder;
+}
+.logo{
+    font-weight: bolder !important;
+    color: #cd8d00 !important ;
+    letter-spacing: 3px !important; 
+}
+
+/* Responsividade */
+@media only screen and (max-width: 1011px) {
+    .nameTypo {
+        font-size: 15px !important;
+    }
+}
+
+@media only screen and (max-width: 843px) {
+    .nav_links {
+        width: 65%;
+    }
+}
+
+@media only screen and (max-width: 706px) {
+    .nav_links {
+        width: 70%;
+    }
+
+    .logout {
+        width: 90px;
+        height: 40px;
+    }
+
+}
+
+@media only screen and (max-width: 659px) {
+    .cursor img {
+        width: 37px;
+        height: 37px;
+    }
+
+    .nameTypo {
+        font-size: 12px!important;
+    }
+
+    .nav_links {
+        width: 68%;
+    }
+
+    .logout {
+        width: 70px;
+        height: 35px;
+        font-size: 14px!important;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .nav_links {
+        width: 75%;
+    }
+}
+
+@media only screen and (max-width: 502px) {
+    .nav_links {
+        width: 78%;
+    }
+
+    .nameTypo {
+        font-size: 11px!important;
+    }
+}
+
+@media only screen and (max-width: 458px) {
+    .toolbarStyle {
+        width: 100%;
+    }
+
+    .logout {
+        width: 50px;
+        height: 30px;
+        font-size: 12px!important;
+    }
+
+    .nav_links {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 424px) {
+    .nameTypo {
+        text-align: center;
+    }
+
+    .nav_links {
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .nameTypo {
+        font-size: 9px!important;
+    }
+}
+
+@media only screen and (max-width: 338px) {
+    .logout {
+        width: 50px;
+        height: 30px;
+        font-size: 10px!important;
+    }
+
+    .cursor img {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+@media only screen and (max-width: 324px) {
+    .logout {
+        background-color: transparent;
+        color: #1e422b!important;
+        font-weight: bold!important;
+    } 
+}
+
+@media only screen and (max-width: 316px) {
+    .nameTypo {
+        font-size: 8px!important;
+    }
+}

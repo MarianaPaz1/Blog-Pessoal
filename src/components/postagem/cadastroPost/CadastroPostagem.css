@@ -1,3 +1,16 @@
 .topo{
     margin-top: 20px;
 }
+.button{
+    margin-top: 10px !important;
+    background-color: white !important;
+    color: #cd8d00 !important;
+   border: 1px solid  #cd8d00 !important;
+
+}
+.button:hover{
+    background-color: black !important;
+    color: #cd8d00 !important;
+   border: 1px solid  #cd8d00 !important;
+   font-weight: bolder;
+}

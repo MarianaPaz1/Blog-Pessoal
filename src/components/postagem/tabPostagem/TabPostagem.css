@@ -1,3 +1,11 @@
 .titulo{
     font-weight: bold;
  }
+.nav2{
+    background-color: black !important;
+    font-weight: bold !important;
+    color: white;
+}
+.nav2:hover {
+    color: rgb(201, 200, 200);
+}
