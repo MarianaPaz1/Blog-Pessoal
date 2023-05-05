@@ -1,5 +1,5 @@
-import { useState,  useEffect } from 'react'
-import './home.css'
+import { useState,  useEffect } from 'react';
+import home from './home.css';
 import Grid from '@mui/material/Grid';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../store/tokens/TokensReducer';
