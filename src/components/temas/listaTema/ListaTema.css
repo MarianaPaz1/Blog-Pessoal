@@ -7,3 +7,9 @@
   margin-left: 4%;
   margin-top: 2%;
 }
+
+.button-delete{
+  background-color: red !important;
+  color:wheat !important;
+  font-weight: bold !important;
+}
